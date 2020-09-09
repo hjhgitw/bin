@@ -2,4 +2,7 @@
 
 # Resizes all the pngs and then used optipng to try to reduce the file size even further
 sips -Z $1 *.png
+
+# Be sure to install optipng before running this script
+# brew install optipng
 find . -iname "*.png" -exec optipng -o7 {} \;
