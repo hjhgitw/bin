@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Resizes all the pngs and then used optipng to try to reduce the file size even further
+sips -Z $1 *.png
+find . -iname "*.png" -exec optipng -o7 {} \;
