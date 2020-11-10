@@ -1,0 +1,8 @@
+#!/bin/bash
+
+MESSAGE="$1"
+if [ -z "$MESSAGE" ]; then
+  osascript -e "display notification \"PING\""  
+else
+  osascript -e "display notification \"$MESSAGE\""
+fi
