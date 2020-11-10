@@ -2,7 +2,7 @@
 
 MESSAGE="$1"
 if [ -z "$MESSAGE" ]; then
-  osascript -e "display notification \"PING\""  
+  osascript -e "display notification \"Your process is done\" with title \"pingme\" sound name \"Glass\""  
 else
-  osascript -e "display notification \"$MESSAGE\""
+  osascript -e "display notification \"$MESSAGE\" with title \"pingme\" sound name \"Glass\""
 fi
