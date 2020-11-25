@@ -1,7 +1,12 @@
 #!/bin/bash
 # Creates an index.ts with exports of all .ts files in that directory
 
-rm index.ts 2> /dev/null
+set -ex
+
+if [ -f index.ts ]; then
+  echo "previous index.ts found, removing..."
+  rm index.ts 2> /dev/null
+fi
 
 shopt -s nullglob
 
